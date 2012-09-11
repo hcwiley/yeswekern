@@ -1,0 +1,60 @@
+<div class='gallery_thumb' id='add-new-piece'>
+	<img src='/media/images/add-new-piece.png' alt='add new piece' />
+</div>
+<div id='add-piece' class='rounded-corners'>
+	<form name='piece-form' action='/add/piece' method='post' id='add-piece-form'>
+		{% csrf_token %}
+		<div id='name-form' class='form-div'>
+			<p>
+				Name of piece:
+			</p>
+			{{  piece_form.title }}
+		</div>
+		<div id='description-form' class='form-div'>
+			<p>
+				Description:
+			</p>
+			{{ piece_form.description }}
+		</div>
+		<div id='date-form' class='form-div'>
+			<p>
+				Date:
+			</p>
+			{{ piece_form.date }}<a href="javascript:DateTimeShortcuts.handleCalendarQuickLink(0, 0);">Today</a>
+		</div>
+		<div class='image-form form-div'>
+			<div class=''>
+				<p>
+					Default Image:
+				</p>
+				{{ piece_form.default_image }}
+			</div>
+			<div class=''>
+				<p>
+					Other Image 1:
+				</p>
+				{{ piece_form.image1 }}
+			</div>
+			<div class=''>
+				<p>
+					Other Image 2:
+				</p>
+				{{ piece_form.image2 }}
+			</div>
+			<div class=''>
+				<p>
+					Other Image 3:
+				</p>
+				{{ piece_form.image3 }}
+			</div>
+		</div>
+		<div class='button'>
+			<input type='submit' id='submit-piece' value='Submit' />
+		</div>
+		<div class='button'>
+			<button id='close-add-piece'>
+				close
+			</button>
+		</div>
+	</form>
+</div>

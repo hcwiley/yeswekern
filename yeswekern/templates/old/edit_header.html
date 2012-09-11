@@ -1,0 +1,15 @@
+<a href='/'><img src='/media/images/gdso_logo.png' alt='' title='index.html'/></a>
+<a class='page {% if page == 'work.html' or page == 'piece.html' %} cur-page{% endif %}' id='work-header' href='/edit/work'>WORK</a>
+{% if page == 'work.html' or page == 'piece.html' %}
+<div id='works-header'>
+    {% for p in pieces %}
+    <div class='work'><a {% if p.pk == piece.pk %} class='cur-page' {% endif %}  href='/edit/work/{{ p.slug }}'>
+       <p>{{ p.title }}</p>
+    </a></div>
+	{% endfor %}
+</div>
+{% endif %}
+<a class='page' href='/edit/profile'>PROFILE</a>
+<a class='page' href='/edit/contact'>CONTACT</a>
+<script type='text/javascript' src='/media/js/header.js'>
+</script>

@@ -1,0 +1,14 @@
+{% include 'edit_head.html'%}
+    <body>
+        <img src='/media/images/top-right-corner.png' id='top-right' alt='' class='crop-corners' /><img src='/media/images/top-left-corner.png' id='top-left' alt='' class='crop-corners' /><img src='/media/images/bottom-right-corner.png' id='bottom-right' alt='' class='crop-corners' /><img src='/media/images/bottom-left-corner.png' id='bottom-left' alt='' class='crop-corners' />
+        <div id='header'>
+            {% include 'edit_header.html' %}
+        </div>
+        <div id='container'>
+            {% include page %}
+        </div>
+        <div id='footer'>
+            {% include 'footer.html' %}
+        </div>
+    </body>
+</html>

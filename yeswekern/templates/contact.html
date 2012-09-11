@@ -1,0 +1,78 @@
+<div id='contact-top'>
+<div id='contact-text'>
+	<h3>The Graphic Design Student Office (GDSO) is an in-house design practice that provides professional design services for local community organizations, giving students the oportunity to gain valuable real world experience and build their portfolios.</h3>
+</div>
+	<div id='current-staff'>
+		<div>
+			<h1>Faculty Advisor</h1>
+			{% for i in advisor %}
+			<p class='staff'>
+				{{ i }}
+			</p>
+			{% endfor %}
+			{% block edit_fa %}
+			{% endblock %}
+		</div>
+		<div>
+			<h1>Graphic Designers</h1>
+			{% for i in graphic_designers %}
+			<p class='staff'>
+				{{ i }}
+			</p>
+			{% endfor %}
+			{% block edit_gd %}
+			{% endblock %}
+		</div>
+		{% if web_developer != None or designer_form %}
+		<div>
+			<h1>Web Developer</h1>
+			{% for i in web_developer %}
+			<p class='staff'>
+				{{ i }}
+			</p>
+			{% endfor %}
+			{% block edit_web %}
+			{% endblock %}
+		</div>
+		{% endif %}
+		<div>
+			<h1>Photographer</h1>
+			{% for i in photographer %}
+			<p class='staff'>
+				{{ i }}
+			</p>
+			{% endfor %}
+			{% block edit_photo %}
+			{% endblock %}
+		</div>
+	</div>
+	<div id='contact-links'>
+		<div>
+			<h1>Email</h1>
+			<a href='mailto:gdso@lsu.edu'>
+			<p>
+				gdso@lsu.edu
+			</p></a>
+		</div>
+		<div>
+			<h1>Phone</h1>
+			<a href='callto:2255785410'>
+			<p>
+				225.578.5410
+			</p></a>
+		</div>
+	</div>
+</div>
+<div id='alumni'>
+	<div>
+		<h1>GDSO Alumni</h1>
+		<br/>
+		{% block edit_alumni %}
+		{% endblock %}
+		{% for i in alumni %} <a href='{{ i.link.with_http }}' target='_blank'>
+		<p class='staff alumni'>
+			{{ i }} ({{ i.degree|upper }} '{{ i.graduation_year|get_digit:"2" }}{{ i.graduation_year|get_digit:"3" }})
+		</p></a>
+		{% endfor %}
+	</div>
+</div>

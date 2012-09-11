@@ -1,0 +1,32 @@
+<a id='logo' class='link' title='Home' href='/'><img src='/media/images/gdso_logo.png'/></a>
+<p>
+    LSU SCHOOL OF ART
+</p>
+<p>
+    gdso@lsu.edu
+</p>
+<p>
+    225.578.5410
+</p>
+<p class='space'></p>
+<p>
+    106 Art Building
+</p>
+<p>
+    Baton Rouge
+</p>
+<p>
+    LA 70803
+</p>
+<br>
+<a id='contact' title='Contact' class='link' href='/contact'><h3>ABOUT</h3></a>
+<div id='nav'>
+    <h1>WORK</h1>
+    {% for p in pieces %}<a href='/{{ p.slug }}' id='{{ p }}' class='{% if p == piece %}current-page{% else %} notCur {% endif %} link'>
+        <p class='link'>
+            {{ p }}
+        </p>
+    </a>
+    {% endfor %}
+    {% csrf_token %}
+</div>

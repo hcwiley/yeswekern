@@ -1,0 +1,32 @@
+{% if user.is_authenticated %}
+<div id='user-menu' class='rounded-corners'>
+	<form id='log-out' method="POST" action='/logout'>
+		{%  csrf_token %}
+	</form>
+	<p>
+		logged in as: <strong>{{ user }}</strong>
+		<br/>
+		<br/>
+		<br/>
+	<button id='logout' class='submit' value="logout">
+		<h4>logout</h4>
+	</button>
+	</p>
+</div>
+{% else %}
+<div id='login' class='rounded-corners'>
+	<form name='login' method='POST' id='login-form' action='/login'>
+		{%  csrf_token %}
+		<p>
+			username:
+		</p>
+		<input type='text' name='username' id='username' value='' />
+		<br/>
+		<p>
+			password:
+		</p>
+		<input type='password' name='password' id='password' value='' />
+		<input class='submit' type='submit' />
+	</form>
+</div>
+{% endif %}

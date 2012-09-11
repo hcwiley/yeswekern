@@ -1,0 +1,27 @@
+<div class='gallery_thumb' id='add-new-piece'>
+    <img src='/media/images/add-new-piece.png' alt='add new piece' />
+</div>
+<div id='add-piece' class='rounded-corners'>
+    <form name='{{ piece }}' action='/add/piece' method='post' id='add-piece-form'>
+        {%  csrf_token %}
+        <p>
+            Name of piece: 
+        </p>{{  piece_form.title }}
+        <p>
+            Image: 
+        </p>{{ piece_form.default_image }}
+        <p>
+            Date: 
+        </p>{{ piece_form.date }}
+        <p>
+            Price: 
+        </p>{{ piece_form.price }}
+        <br/>
+        <p>
+            Series: 
+        </p>{{ piece_form.series }}<input type='submit' id='submit-piece' value='Submit' />
+    </form>
+    <button id='close-add-piece'>
+        close
+    </button>
+</div>

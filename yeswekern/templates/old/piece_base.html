@@ -1,0 +1,40 @@
+<div id='slide-show'>
+    <div id='slide-show-img'>
+        <div id='img-slider'>
+            <div class='slide-img' style='background-image: url({{ piece.default_image.image.url }})' id='ss-{{ piece.id }}'>
+            </div>
+            {% for img in images %}
+            <div class='slide-img' style='background-image: url({{ img.image.url }})' id='ss-{{ img.id }}'>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div id='slide-indicator'>
+        <img src='/media/images/arrow-left.png' alt='' class='arrows' id='prev-img'/><img src='/media/images/arrow-right.png' alt='' class='arrows' id='next-img'/>
+    </div>
+    <div id='description'>
+        <h3>{{ piece.title }}</h3>
+        <br/>
+        <p>
+            {{ piece.description }}
+        </p>
+    </div>
+</div>
+<div id='other-works'>
+    <img src='/media/images/arrow-left.png' alt='' class='works-arrows' id='prev-works'/>
+    <div id='other-works-container'>
+        <div id='other-works-slider'>
+            {% for piece in pieces %}<a href='/work/{{ piece.slug }}'>
+                <div class='other-img-frame' style='background-image: url({{ piece.default_image.image.url }})'>
+                </div>
+                <p>
+                    {{  piece.title }} 
+                </p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <img src='/media/images/arrow-right.png' alt='' class='works-arrows' id='next-works'/>
+</div>
+<script src='/media/js/work.js' type='text/javascript'>
+</script>

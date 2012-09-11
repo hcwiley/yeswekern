@@ -1,0 +1,28 @@
+<div id='piece' class='piece content'>
+    <div id='piece-info'>
+        <h1>{{ piece }}</h1>
+        <div id='discription'>
+            <p>{{ piece.description }}</p>
+        </div>
+        <h1>Client</h1>
+		<p>{{ piece.client }}</p>
+		<p class='space'></p><h1>Designers</h1>
+		{% for designer in piece.designers.all %}
+            <p>{{ designer }}</p>
+		{% endfor %}
+		<p class='space'></p><h1>Awards</h1>
+        {% for award in piece.awards.all %}
+            <p>{{ award }}</p>
+        {% endfor %}
+		{% if piece.link %}
+			<p class='space'></p><h1>Link</h1>
+        	<a href='{{ piece.link.with_http }}'>{{ piece.link }}</a>
+    	{% endif %}
+    </div>
+    <div id='images'>
+        <div><img src='{{ piece.default_image }}'/></div>
+		{% for img in piece.images.all %}
+		  <div><img id='other-{{ img.pk }}' src='/media/{{ img.image }}' /></div>
+        {% endfor %}
+    </div>
+</div>

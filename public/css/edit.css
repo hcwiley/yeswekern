@@ -1,0 +1,202 @@
+#login {
+	border: 1px solid #000;
+	width: 270px;
+	height: 40px;
+	position: absolute;
+	top: 60px;
+	right: 10px;
+	z-index: 10;
+	padding: 5px 10px 5px 10px;
+	display: inline;
+	background-color: #00AEDF;
+}
+#login input, #login p {
+	margin-right: 5px;
+	margin-top: 0px;
+	display: inline;
+	color: #FFF;
+	font-weight: 900;
+}
+#login.login-fail {
+	background-color: #992222;
+	height: 60px;
+}
+#user-menu {
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	width: 170px;
+	height: 30px;
+	z-index: 10;
+}
+#add-new-piece {
+	display: none;
+	border: 1px solid black;
+	opacity: 0;
+}
+#add-new-piece:hover {
+	cursor: pointer;
+}
+#add-new-piece h1 {
+	position: relative;
+	top: 5px;
+	left: 40px;
+}
+#add-piece {
+	position: absolute;
+	color: #000;
+	background: #FFF;
+	opacity: 0;
+	z-index: -1;
+	top: 50px;
+	left: 0px;
+	width: 650px;
+	height: 350px;
+	display: block;
+	border: 1px solid black;
+}
+#add-piece-form {
+	position: absolute;
+	display: inline;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+#add-piece-form p {
+	height: 20px;
+	display: inline-block;
+	color: #000;
+	font-weight: 900;
+}
+#submit-piece {
+	position: relative;
+	top: 25px;
+	left: 205px;
+	z-index: 3;
+}
+#close-add-piece {
+	position: relative;
+	top: 90%;
+	left: 90%;
+	z-index: 3;
+}
+div.form-div {
+	position: relative;
+	display: inline-block;
+	margin: 0px;
+	left: 0px;
+	width: 150px;
+	height: 50px;
+}
+div.image-form {
+	width: 600px;
+	left: 0px;
+}
+div.image-form > div {
+	display: inline;
+	width: 150px;
+}
+div.image-form > div > input {
+	width: 170px;
+}
+#name-form {
+	left: 5px;
+	top: -90px;
+}
+#description-form {
+	height: 150px;
+	width: 380px;
+	left: 0px;
+}
+#description-form > p {
+	position: relative;
+	top: -115px;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+#date-form {
+	left: 5px;
+	top: -100px;
+}
+.editting {
+	border: 1px dashed #F00;
+}
+.editting h4 {
+	color: #f00;
+	z-index: 2;
+	position: absolute;
+	left: 30px;
+	height: 20px;
+	width: 100px;
+}
+#save-menu {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+}
+div.add-designer {
+	position: relative;
+	margin-top: 15px;
+	padding-top: 35px;
+	height: 15px;
+	width: 240px;
+	overflow: hidden;
+	display: none;
+}
+.desginer-form > div {
+	display: none;
+}
+div.field {
+	height: 25px;
+}
+div.field > input {
+	width: 100px;
+	height: 25px;
+}
+div.auto-field {
+	display: none;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+}
+.new-staff h4 {
+	margin-top: 10px;
+	color: #00AEDB;
+}
+.new-staff:hover {
+	cursor: pointer;
+	opacity: .7;
+}
+p.staff:hover {
+	cursor: pointer;
+}
+p.change {
+	display: inline;
+	font-size: 1.2em;
+	margin-right: 5px;
+}
+p.remove {
+	display: inline;
+	color: #F22;
+	font-size: 1.2em;
+}
+.submit {
+	background: #000;
+	width: 60px;
+}
+input.submit > * {
+	color: #000;
+}
+textarea {
+	margin-top: 5px;
+}
+input, textarea, button {
+	display: inline;
+	border: 1px solid black;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-khtml-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}

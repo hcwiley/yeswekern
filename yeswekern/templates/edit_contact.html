@@ -1,0 +1,129 @@
+{% extends 'contact.html' %}
+{% block edit_fa %}
+<div class="new-staff">
+	<h4>(+) Add New Staff</h4>
+</div>
+<div class='add-designer'>
+	<form id='fa-form' name='fa' method='POST' class='designer-form' action='/add/designer'>
+		{% csrf_token %}
+		<div class='field first'>
+			<label>Name:</label>
+			{{ designer_form.name }}
+		</div>
+		<div class='field'>
+			<label>Degree:</label>
+			{{ designer_form.degree }}
+		</div>
+		<div class='field last'>
+			<input type="submit" value="Submit" />
+		</div>
+		<div class='auto-field'>
+			<select name='position'><option selected="selected" value="fa">Faculty Advisor</option></select>
+			<input name='alumni' value='false' />
+		</div>
+	</form>
+</div>
+{% endblock %}
+{% block edit_gd %}
+<div class="new-staff">
+	<h4>(+) Add New Staff</h4>
+</div>
+<div class='add-designer'>
+	<form id='gd-form' name='gd' method='POST' class='designer-form' action='/add/designer'>
+		{% csrf_token %}
+		<div class='field first'>
+			<label>Name:</label>
+			{{ designer_form.name }}
+		</div>
+		<div class='field'>
+			<label>Degree:</label>
+			{{ designer_form.degree }}
+		</div>
+		<div class='field last'>
+			<input type="submit" value="Submit" />
+		</div>
+		<div class='auto-field'>
+			<select name='position'><option selected="selected" value="gd">Graphic Designer</option></select>
+			<input name='alumni' value='false' />
+		</div>
+	</form>
+</div>
+{% endblock %}
+{% block edit_photo %}
+<div class="new-staff">
+	<h4>(+) Add New Staff</h4>
+</div>
+<div class='add-designer'>
+	<form id='photo-form' name='photo' method='POST' class='designer-form' action='/add/designer'>
+		{% csrf_token %}
+		<div class='field first'>
+			<label>Name:</label>
+			{{ designer_form.name }}
+		</div>
+		<div class='field'>
+			<label>Degree:</label>
+			{{ designer_form.degree }}
+		</div>
+		<div class='field last'>
+			<input type="submit" value="Submit" />
+		</div>
+		<div class='auto-field'>
+			<select name='position'><option selected="selected" value="photo">Photographer</option></select>
+			<input name='alumni' value='false' />
+		</div>
+	</form>
+</div>
+{% endblock %}
+{% block edit_web %}
+<div class="new-staff">
+	<h4>(+) Add New Staff</h4>
+</div>
+<div class='add-designer'>
+	<form id='web-form' name='web' method='POST' class='designer-form' action='/add/designer'>
+		{% csrf_token %}
+		<div class='field first'>
+			<label>Name:</label>
+			{{ designer_form.name }}
+		</div>
+		<div class='field'>
+			<label>Degree:</label>
+			{{ designer_form.degree }}
+		</div>
+		<div class='field last'>
+			<input type="submit" value="Submit" />
+		</div>
+		<div class='auto-field'>
+			<select name='position'><option selected="selected" value="web">Web Developer</option></select>
+			<input name='alumni' value='false' />
+		</div>
+	</form>
+</div>
+{% endblock %}
+{% block edit_alumni %}
+<div class="new-staff">
+	<h4>(+) Add New Alumni</h4>
+</div>
+<div class='add-designer'>
+	<form id='alumni-form' name='alumni' method='POST' class='designer-form' action='/add/designer'>
+		{% csrf_token %}
+		<div class='field first'>
+			<label>Name:</label>
+			{{ designer_form.name }}
+		</div>
+		<div class='field'>
+			<label>Position:</label>
+			{{ designer_form.position }}
+		</div>
+		<div class='field'>
+			<label>Degree:</label>
+			{{ designer_form.degree }}
+		</div>
+		<div class='field last'>
+			<input type="submit" value="Submit" />
+		</div>
+		<div class='auto-field'>
+			<input name='alumni' value='true' />
+		</div>
+	</form>
+</div>
+{% endblock %}

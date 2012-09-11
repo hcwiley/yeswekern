@@ -1,0 +1,5 @@
+<div id='gallery' class='content'>
+{% for piece in pieces %}
+	<a href='/{{ piece.slug }}'><div class='gallery_thumb'><img src='{{ piece.default_image.thumb }}'/></div></a>
+{% endfor %}
+</div>

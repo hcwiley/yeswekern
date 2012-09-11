@@ -1,0 +1,22 @@
+{% include 'edit_head.html' %}
+<script src='/media/js/piece.js' type='text/javascript'>
+</script>
+<body>
+    <div class="link" id="header">
+        {% include 'header.html' %}
+    </div>
+    <div id="container">
+    	{% include 'add-piece.html' %}
+        {% if piece.medium == 'installation' %}
+        {% include 'installation.html' %}
+        {% endif %}
+        {% if piece.medium == 'visualizations' %}
+        {% include 'visualizations.html' %}
+        {% else %}
+        {% include 'piece_base.html' %}
+        {% endif %}
+    </div>
+    <div id="footer" class="link">
+    </div>
+</body
+</html>
